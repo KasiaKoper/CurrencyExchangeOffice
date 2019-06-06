@@ -4,12 +4,11 @@ import java.util.Map;
 
 public class ExchangeOffice {
 
-    private Map<Currency, Double> availableFunds;                //zawsze w kolekcjach uzywamy zmiennych zlozonych (tutaj Double zamiast double)
+    private Map<Currency, Double> availableFunds;
 
-    //konstruktor
     public ExchangeOffice(double startFunds) {
-        this.availableFunds = new HashMap<>();            //inicjalizujemy mape tworzac obiekt, a nie wczesniej, zeby nie zabierac niepotrzebnie pamieci, jesli obiekt nie zostanie stworzony
-        for (Currency c : Currency.values()) {                 //values to metoda przypisana domyslnie do enumów
+        this.availableFunds = new HashMap<>();
+        for (Currency c : Currency.values()) {
             availableFunds.put(c, startFunds);
         }
     }

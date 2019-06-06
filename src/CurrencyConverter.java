@@ -21,7 +21,6 @@ public class CurrencyConverter {
                     + "&apiKey="
                     + KEY);
 
-            //opóznienie, zawieszenie watku, aby poczekać aż wyswietli sie strona
             BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
 
             String line = reader.readLine();
